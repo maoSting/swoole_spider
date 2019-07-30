@@ -1,0 +1,36 @@
+{
+    "name": "dingq/spider",
+    "description": "spider by swoole",
+    "type": "project",
+    "keywords": [
+        "spider",
+        "swoole"
+    ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "dingq",
+            "email": "237661791@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "php-curl-class/php-curl-class": "^8.4",
+        "voku/simple_html_dom": "^4.1",
+        "sethink/swoole-orm": "^0.0.6"
+    },
+    "require-dev": {
+        "swoole/ide-helper": "~4.3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        }
+    }
+}

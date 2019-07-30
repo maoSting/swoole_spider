@@ -1,0 +1,65 @@
+[server]
+host =  127.0.0.1
+port = 9501
+
+
+
+[swoole]
+;设置启动的worker进程数
+worker_num = 1
+;是否守护进程运行
+daemonize = 0
+;设置worker进程的最大任务数，默认为0
+max_request = 0
+;服务器程序，最大允许的连接数
+max_conn = 100
+;配置task进程的数量
+task_worker_num = 3
+;设置task进程与worker进程之间通信的方式1unix socket、2消息队列、3消息队列通信，并设置为争抢模式
+task_ipc_mode = 1
+;task任务最大进程数
+task_max_request = 3
+;task数据临时存放目录
+task_tmpdir = /tmp/task_data
+task_enable_coroutine = true
+;swoole错误日志存放路径
+log_file = /tmp/swoole/swoole.log
+;master进程号
+master_pid = /tmp/swoole/master_pid.log
+;管理进程号
+manager_pid = /tmp/swoole/manager_pid.log
+
+
+
+[mysql]
+;swoole-orm
+;服务器地址
+host = 127.0.0.1
+;端口
+port = 3306
+;用户名
+user = tldc_online
+;密码
+password = 123456
+;编码
+charset = utf8mb4
+;数据库名
+database = db_name
+;表前缀
+prefix =
+;空闲时，保存的最大链接，默认为5
+poolMin = 5
+;地址池最大连接数，默认1000
+poolMax = 1000
+;清除空闲链接定时器，默认60秒，单位ms
+clearTime = 60000
+;空闲多久清空所有连接，默认5分钟，单位ms
+clearAll = 300000
+;设置是否返回结果，默认为true
+setDefer = true
+
+
+
+[redis]
+host = 127.0.0.1
+port = 6379
